@@ -183,7 +183,7 @@ ProcesadorGenerateProto/
 ---
 
 ## Créditos
-Desarrollado por [Tu Nombre o Equipo].
+Desarrollado por Franco Jose Carnero Alvarado Carnero.
 
 ---
 
