@@ -207,7 +207,8 @@ class ProtoGeneratorProcessor(
         }
         requireNotNull(generateProtoAnnotation) { "La clase ${classDecl.simpleName.asString()} debe tener la anotación @GenerateProto" }
         val pkgName = generateProtoAnnotation.arguments.firstOrNull()?.value as? String
-        require(!pkgName.isNullOrBlank()) { "El atributo packageName de @GenerateProto no puede ser nulo o vacío en ${classDecl.simpleName.asString()}" }
+        requireNotNull(pkgName) { "El atributo packageName de @GenerateProto no puede ser nulo en ${classDecl.simpleName.asString()}" }
+        require(pkgName.isNotBlank()) { "El atributo packageName de @GenerateProto no puede estar vacío en ${classDecl.simpleName.asString()}" }
         return pkgName
     }
 
