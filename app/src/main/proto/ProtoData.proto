@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+option java_package = "com.grupoalv.procesadorgenerateproto";
+
+message ProtoData {
+  string id = 1;
+}
